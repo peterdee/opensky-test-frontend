@@ -1,6 +1,6 @@
 ## opensky-test-frontend
 
-Frontend for the OpenSky test project.
+Frontend for the [OpenSky](https://opensky-network.org/apidoc/rest.html) test project.
 
 DEV: http://localhost:3000
 

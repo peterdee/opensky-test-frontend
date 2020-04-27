@@ -51,6 +51,7 @@ function Login(): React.ReactElement {
           name="password"
           id="password"
           label="password"
+          type="password"
           variant="outlined"
         />
         <Button onClick={onLogin} variant="contained" color="primary">

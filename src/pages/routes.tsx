@@ -9,7 +9,7 @@ import Login from './login';
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     component: Login,
     exact: true,
   },
