@@ -29,6 +29,7 @@ function Login(): React.ReactElement {
     const { login, password } = formValues;
 
     if (login === DEMO_CREDENTIAL && password === DEMO_CREDENTIAL) {
+      localStorage.setItem('isAuthenticated', 'true');
       history.push('/home');
     }
   }, [history, formValues]);

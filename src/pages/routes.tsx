@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Route,
   Switch,
+  Redirect,
 } from 'react-router-dom';
 
 import Home from './home';
@@ -20,15 +21,20 @@ const routes = [
   },
 ];
 
-export default (): React.ReactElement => (
-  <Switch>
-    {routes.map(({ path, component, exact }) => (
-      <Route
-        key={path}
-        path={path}
-        exact={exact}
-        component={component}
-      />
-    ))}
-  </Switch>
-);
+export default (): React.ReactElement => {
+  const isAuthenticated = Boolean(localStorage.getItem('isAuthenticated')) || false;
+
+  return (
+    <Switch>
+      {routes.map(({ path, component, exact }) => (
+        <Route
+          key={path}
+          path={path}
+          exact={exact}
+          component={component}
+        />
+      ))}
+      {isAuthenticated ? <Redirect exact from="*" to="/home" /> : <Redirect exact from="*" to="/login" />}
+    </Switch>
+  );
+};
