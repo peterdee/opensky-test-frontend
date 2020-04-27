@@ -1,0 +1,13 @@
+.wrapper {
+  margin: 200px auto 0;
+  width: 30%;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+
+  & > div, button {
+    margin: 20px 0;
+  }
+}
