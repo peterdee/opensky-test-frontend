@@ -36,6 +36,7 @@ function Login(): React.ReactElement {
     }
 
     if (login === DEMO_CREDENTIAL && password === DEMO_CREDENTIAL) {
+      localStorage.setItem('isAuthenticated', 'true');
       return history.push('/home');
     }
 
