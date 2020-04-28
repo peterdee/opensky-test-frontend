@@ -49,9 +49,13 @@ function AirportCard(props: AirportCardProps): React.ReactElement {
     setOpenModal(true);
   }, []);
 
+  const closeModal = useCallback(() => {
+    setOpenModal(false);
+  }, []);
+
   return (
-    <Card className={classes.root} onClick={openModal}>
-      <CardActionArea>
+    <Card className={classes.root}>
+      <CardActionArea onClick={openModal}>
         <CardContent>
           <Typography className={styles.title} gutterBottom variant="h5" component="h2">
             {name}
@@ -72,7 +76,7 @@ function AirportCard(props: AirportCardProps): React.ReactElement {
       </CardActionArea>
       <Modal
         isOpen={isOpenModal}
-        setOpen={setOpenModal}
+        closeModal={closeModal}
       >
         <FlightsList icao={icao} />
       </Modal>
