@@ -16,6 +16,11 @@
   text-align: center;
 }
 
+.title, .errorMessage {
+  font-size: 20px;
+  font-weight: 200;
+}
+
 .loginForm {
   & > div, button {
     margin: 20px 0;
@@ -28,6 +33,4 @@
 
 .errorMessage {
   color: red;
-  font-size: 20px;
-  font-weight: 200;
 }
