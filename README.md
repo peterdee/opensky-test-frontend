@@ -23,7 +23,7 @@ See the [`.env.example`](.env.example) for details.
 ### Launch
 
 ```shell script
-yarn start
+yarn dev
 ```
 
 ### Build
@@ -31,3 +31,7 @@ yarn start
 ```shell script
 yarn build
 ```
+
+### Heroku
+
+The `stage` branch is automatically deployed to Heroku.

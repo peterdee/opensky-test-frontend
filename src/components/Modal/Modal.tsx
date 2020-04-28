@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from 'react';
+import React, { memo } from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -21,32 +21,26 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 interface TransitionsModalProps {
   children: React.ReactNode;
   isOpen: boolean;
-  setOpen(isOpen: boolean): void;
+  closeModal: () => void;
 }
 
 function TransitionsModal(props: TransitionsModalProps): React.ReactElement {
   const {
     children,
     isOpen,
-    setOpen,
+    closeModal,
   } = props;
 
   const classes = useStyles();
 
-  const handleClose = useCallback(() => {
-    setOpen(false);
-  }, [setOpen]);
-
   return (
     <div>
       <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
         className={classes.modal}
         open={isOpen}
-        onClose={handleClose}
+        onClose={closeModal}
         closeAfterTransition
-        onBackdropClick={handleClose}
+        onBackdropClick={closeModal}
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
