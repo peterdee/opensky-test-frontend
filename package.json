@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/_/opensky-test-frontend"
+    "url": "git+https://github.com/peterdee/opensky-test-frontend"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.12",
