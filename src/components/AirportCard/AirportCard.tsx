@@ -12,10 +12,10 @@ import styles from './AirportCard.module.scss';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    width: 345,
   },
   media: {
-    height: 140,
+    height: 200,
   },
 });
 
