@@ -45,8 +45,8 @@ function Login(): React.ReactElement {
 
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.center}>
-        Log in
+      <h1 className={`${styles.center} ${styles.title}`}>
+        LOG IN
       </h1>
       <form
         onSubmit={onLogin}
