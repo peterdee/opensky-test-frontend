@@ -19,12 +19,14 @@ function Home(): React.ReactElement {
 
   return (
     <div className={classes.root}>
-      { !isAuthenticated && (
-        <Redirect exact from="*" to="/login" />
-      ) }
-      <Grid container spacing={8}>
-        { BUSIEST_AIRPORTS.map((airportInfo) => (
-          <Grid key={airportInfo.code} item xs={3}>
+      {!isAuthenticated && <Redirect exact from="*" to="/login" />}
+      <Grid container spacing={7}>
+        {BUSIEST_AIRPORTS.map((airportInfo) => (
+          <Grid
+            item
+            key={airportInfo.code}
+            lg="auto"
+          >
             <AirportCard airportInfo={airportInfo} />
           </Grid>
         )) }
