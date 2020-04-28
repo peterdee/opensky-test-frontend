@@ -29,7 +29,7 @@ function Home(): React.ReactElement {
           >
             <AirportCard airportInfo={airportInfo} />
           </Grid>
-        ))}
+        )) }
       </Grid>
     </div>
   );

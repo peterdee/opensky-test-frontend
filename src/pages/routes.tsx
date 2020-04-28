@@ -10,7 +10,7 @@ import Login from './login';
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     component: Login,
     exact: true,
   },
@@ -34,7 +34,11 @@ export default (): React.ReactElement => {
           component={component}
         />
       ))}
-      {isAuthenticated ? <Redirect exact from="*" to="/home" /> : <Redirect exact from="*" to="/login" />}
+      {
+        isAuthenticated
+          ? (<Redirect exact from="*" to="/home" />)
+          : (<Redirect exact from="*" to="/" />)
+      }
     </Switch>
   );
 };

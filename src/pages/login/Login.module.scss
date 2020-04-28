@@ -1,13 +1,36 @@
+.wrapper, .loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
 .wrapper {
-  margin: 200px auto 0;
-  width: 30%;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 40%;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.center {
+  text-align: center;
+}
+
+.title, .errorMessage {
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .loginForm {
-  display: flex;
-  flex-direction: column;
-
   & > div, button {
     margin: 20px 0;
   }
+}
+
+.formError {
+  height: 25px;
+}
+
+.errorMessage {
+  color: red;
 }
